@@ -1,6 +1,6 @@
 # 🕶️ DarkSide RP Website
 
-DarkSide RP website is a modern, responsive platform built to showcase the unique world of DarkSide RolePlay. Created using React, Next.js, and Tailwind CSS, the site offers visitors a fast, sleek, and user-friendly experience.
+DarkSide RP website is a modern, responsive platform built to showcase the unique world of DarkSide RolePlay. Created using React and Tailwind CSS, the site offers visitors a fast, sleek, and user-friendly experience.
 
 <img src="public/header.png" style="width: 100%;" alt="DarkSide RP Website Header">
 
