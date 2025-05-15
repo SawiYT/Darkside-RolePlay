@@ -15,7 +15,7 @@ DarkSide RP is a modern, responsive website built for a GTA V RolePlay server ru
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
     <img src="public/info.png" style="width: 45%;" alt="Los Santos Map">
-    <img src="public/about.png" style="width: 25%;" alt="DarkSide RP Factions">
+    <img src="public/about.png" style="width: 28%;" alt="DarkSide RP Factions">
 </div>
 
 ## ℹ️ About
