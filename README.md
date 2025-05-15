@@ -1,33 +1,39 @@
-# 🕶️ DarkSide RP Server Website
+# 🕶️ DarkSide RP Website
 
-DarkSide RP is a modern, responsive website built for a GTA V RolePlay server running on FiveM. Developed using React, Next.js, and Tailwind CSS, the site offers fans an immersive introduction to the unique roleplaying experience and vibrant community of DarkSide RP.
+DarkSide RP website is a modern, responsive platform built to showcase the unique world of DarkSide RolePlay. Created using React, Next.js, and Tailwind CSS, the site offers visitors a fast, sleek, and user-friendly experience.
 
-<img src="public/header.png" style="width: 100%;" alt="DarkSide RP Server Trailer">
+<img src="public/header.png" style="width: 100%;" alt="DarkSide RP Website Header">
 
 ## 🚀 Features
 
-- **Unique RP Experience** – Dive into a roleplaying world where you can create your own character and story on the FiveM server.
-- **Active Player Community** – Join a tight-knit group of players who shape the world together.
-- **Dynamic Map and Events** – Explore the ever-evolving city of Los Santos with new locations and exciting events.
-- **Factions and Roles** – Become part of one of many factions, including law enforcement, and experience thrilling gameplay.
-- **Responsive Design** – The website is fully optimized for desktop, tablet, and mobile devices.
-- **Cutting-Edge Web Technologies** – Built with Next.js for fast loading and SEO optimization, React for interactive UI, and Tailwind CSS for sleek, modern styling.
+- **Modern Web Technologies** – Built with Next.js for optimal performance and SEO, React for dynamic UI, and Tailwind CSS for clean and responsive design.  
+- **Responsive Layout** – Fully optimized for desktop, tablet, and mobile devices, ensuring smooth navigation everywhere.  
+- **Engaging Visuals** – Includes trailers, images, and multimedia content to introduce visitors to the DarkSide RP universe.  
+- **Community Focused** – Designed as an information hub with easy access to contact details and community resources.  
+- **Fast and Lightweight** – Prioritizes speed and minimal load times for a seamless browsing experience.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <img src="public/info.png" style="width: 45%;" alt="Los Santos Map">
-    <img src="public/about.png" style="width: 27%;" alt="DarkSide RP Factions">
+    <img src="public/info.png" style="width: 45%;" alt="DarkSide RP Visuals">
+    <img src="public/about.png" style="width: 27%;" alt="Community Info">
 </div>
 
 ## ℹ️ About
 
-DarkSide RP is a place where you can be whoever you want — experience unique roleplay, create stories, and discover endless opportunities to interact within the world of Los Santos.
+This website serves as a gateway to the DarkSide RP community, providing essential information, contact details, and an overview of what the DarkSide RP experience offers.
 
-This site is a community-driven project focused on clarity, speed, and modern design.
+It is an independent project developed by community members to ensure clarity, speed, and accessibility.
 
-## 📬 Contact
+## ❓ FAQ
 
-- **Email:** contact@darkside.pl  
-- **Forum:** [forum-darkside.pl](http://forum-darkside.pl)  
+### What technologies power this website?  
+The site is built using React, Next.js, and Tailwind CSS to provide a fast and responsive user experience.
 
-&copy; 2025 AmazingDev.PL — an independent project not affiliated with Rockstar North or Take-Two Interactive.
+### Is the site mobile-friendly?  
+Yes, the website adapts seamlessly to all screen sizes, from phones to desktops.
+
+### Who maintains this website?  
+The website is maintained by independent developers and community members, not affiliated with any official game publishers.
+
+### How can I contact the team?  
+You can reach out via the discord.
 
