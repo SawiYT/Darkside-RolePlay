@@ -59,5 +59,4 @@
 .hover-underline:hover {
 	opacity: 1; /* Pełna widoczność */
 	scale: 1.05; /* Delikatne powiększenie */
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Dodaje cień */
 }

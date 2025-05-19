@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { HomeIcon, ShopIcon, InfoIcon } from '../config/config';
+import config from '../config/config.json';
 import NavElement from './NavElement';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState('');
-	const [navbarOpacity, setNavbarOpacity] = useState(0); // Stan dla przezroczystości navbaru
+	const [navbarOpacity, setNavbarOpacity] = useState(0);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
 
-			// Ustawienie aktywnej sekcji
 			if (
 				scrollPosition >= document.querySelector('#about')?.offsetTop - 100 &&
 				scrollPosition < document.querySelector('#info')?.offsetTop - 100
@@ -22,17 +21,15 @@ const Navbar = () => {
 			} else {
 				setActiveSection('#home');
 			}
-
-			// Ustawienie przezroczystości navbaru po przewinięciu 100vh
 			if (scrollPosition > window.innerHeight) {
-				setNavbarOpacity(0.8); // Przezroczystość po przewinięciu
+				setNavbarOpacity(0.8); 
 			} else {
-				setNavbarOpacity(0); // Brak przezroczystości u góry strony
+				setNavbarOpacity(0); 
 			}
 		};
 
 		window.addEventListener('scroll', handleScroll);
-		handleScroll(); // Call on mount to set the initial state
+		handleScroll(); 
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
@@ -40,11 +37,10 @@ const Navbar = () => {
 
 	return (
 		<nav className='fixed top-0 left-0 w-full z-50' style={{ transition: 'background-color 0.3s ease' }}>
-			{/* Tło navbaru z dynamiczną przezroczystością */}
 			<div
 				className='relative w-full mx-auto flex justify-between items-center p-4'
 				style={{
-					backgroundColor: `rgba(0, 0, 0, ${navbarOpacity})`, // Dynamically change background opacity
+					backgroundColor: `rgba(0, 0, 0, ${navbarOpacity})`,
 				}}>
 				<button className='lg:hidden text-white p-2' onClick={toggleMenu}>
 					<svg
@@ -59,42 +55,34 @@ const Navbar = () => {
 				<div className='flex justify-between mx-auto max-w-7xl items-center w-full'>
 					<div className='hidden lg:flex justify-between items-center'>
 						<p className='relative flex flex-col leading-tight font-bold uppercase font-raleway mx-3 text-center text-pink-400 text-2xl'>
-							<span className='tracking-wide font-black'>Darkside</span>
-							<span className='text-white text-lg tracking-widest -mt-1'>RolePlay</span>
+							<span className='tracking-wide font-black'>{config.navbar.logo.highlightedText}</span>
+							<span className='text-white text-lg tracking-widest -mt-1'>{config.navbar.logo.plainText}</span>
 						</p>
 					</div>
 
 					<div className='hidden lg:flex justify-between items-center'>
-						<NavElement content={'Home'} scrollToId={'#home'} active={activeSection === '#home'} />
-						<NavElement content={'about'} scrollToId={'#about'} active={activeSection === '#about'} />
-						<NavElement content={'Info'} scrollToId={'#info'} active={activeSection === '#info'} />
+						{config.navbar.links.map((link, index) => (
+							<NavElement
+								key={index}
+								content={link.label}
+								scrollToId={link.href}
+								active={activeSection === link.href}
+							/>
+						))}
 					</div>
 				</div>
 
-				{/* Przycisk menu w wersji mobilnej */}
 				<div className={`lg:hidden fixed top-0 left-0 w-full h-full z-40 ${menuOpen ? 'block' : 'hidden'}`}>
-					{/* Tło przyciemnione podczas otwartego menu */}
 					<div className='absolute top-0 left-0 w-full h-full bg-black opacity-50' onClick={toggleMenu}></div>
 					<div className='flex flex-col items-center justify-center h-full z-50'>
-						<NavElement
-							icon={<ShopIcon width={60} height={60} />}
-							content={'about'}
-							closeMenu={toggleMenu}
-							scrollToId={'#about'}
-						/>
-						<NavElement
-							icon={<HomeIcon width={60} height={60} />}
-							content={'Home'}
-							closeMenu={toggleMenu}
-							scrollToId={'#home'}
-							main={true}
-						/>
-						<NavElement
-							icon={<InfoIcon width={60} height={60} />}
-							content={'Info'}
-							closeMenu={toggleMenu}
-							scrollToId={'#info'}
-						/>
+						{config.navbar.links.map((link, index) => (
+							<NavElement
+								key={index}
+								content={link.label}
+								scrollToId={link.href}
+								active={activeSection === link.href}
+							/>
+						))}
 					</div>
 					<button className='absolute top-4 right-4 text-white text-3xl' onClick={toggleMenu}>
 						<svg fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
